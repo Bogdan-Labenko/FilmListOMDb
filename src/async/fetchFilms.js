@@ -19,11 +19,9 @@ export const fetchFilms = (title, year, type) => {
             if(res.data.Error === 'Too many results.') return
             if(res.data.Error === 'Movie not found!')
             {
-                //setFindingStatus(false) 
                 return;
             } 
             dispatch(setFilmListAction(res.data))
-            //setFindingStatus(true)
         })
         .catch(error => console.log(error))
     }
